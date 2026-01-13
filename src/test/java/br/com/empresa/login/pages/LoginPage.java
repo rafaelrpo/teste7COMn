@@ -28,6 +28,7 @@ public class LoginPage {
         driver.get(TestConfig.get("base.url") + "/login");
     }
 
+
     public void login(String user, String pass) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(usernameInput)).clear();
         driver.findElement(usernameInput).sendKeys(user);
