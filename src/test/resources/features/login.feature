@@ -17,3 +17,11 @@ Feature: Login do sistema
     Given que acesso a página de login
     When realizo 3 tentativas de login com senha inválida
     Then devo visualizar mensagem de usuário bloqueado
+
+Feature: Login
+
+  Scenario: Login válido
+    Given que acesso a página de login
+    When informo usuário e senha válidos
+    Then devo ver mensagem de sucesso
+
