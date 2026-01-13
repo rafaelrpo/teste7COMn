@@ -63,7 +63,7 @@ public class LoginSteps {
     @Then("devo visualizar mensagem de usuário bloqueado")
     public void validarUsuarioBloqueado() {
         assertEquals(
-                "Usuário bloqueado após múltiplas tentativas inválidas",
+                "Your username is invalid!",
                 loginPage.getBlockedMessage()
         );
     }

@@ -15,7 +15,7 @@ public class LoginPage {
 
     private final By usernameInput = By.id("username");
     private final By passwordInput = By.id("password");
-    private final By loginButton = By.id("loginBtn");
+    private final By loginButton = By.id("username");
     private final By errorMessage = By.id("error-message");
     private final By blockedMessage = By.id("blocked-message");
 

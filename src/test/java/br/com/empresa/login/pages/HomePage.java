@@ -12,8 +12,8 @@ public class HomePage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    private final By userDashboard = By.id("user-dashboard");
-    private final By accessDenied = By.id("access-denied");
+    private final By userLogin = By.xpath("//*[@id=\"login\"]/button/i");
+    private final By accessDenied = By.id("flash-messages");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -21,7 +21,7 @@ public class HomePage {
     }
 
     public boolean isUserDashboardVisible() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(userDashboard)).isDisplayed();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(userLogin)).isDisplayed();
     }
 
     public boolean isAccessDeniedVisible() {
