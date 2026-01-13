@@ -13,6 +13,7 @@ public class HomePage {
     private final WebDriverWait wait;
 
     private final By userLogin = By.xpath("//*[@id=\"login\"]/button/i");
+    private final By afterLogin = By.xpath("//*[@id=\"content\"]/div/h4");
     private final By accessDenied = By.id("flash-messages");
 
     public HomePage(WebDriver driver) {
@@ -22,6 +23,10 @@ public class HomePage {
 
     public boolean isUserDashboardVisible() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(userLogin)).isDisplayed();
+    }
+
+    public boolean isUserDashboardVisibleLogin() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(afterLogin)).isDisplayed();
     }
 
     public boolean isAccessDeniedVisible() {

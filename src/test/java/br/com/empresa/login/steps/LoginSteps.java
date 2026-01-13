@@ -53,6 +53,7 @@ public class LoginSteps {
     @Then("devo visualizar o dashboard do usuário")
     public void validarDashboard() {
         assertTrue(homePage.isUserDashboardVisible());
+        assertTrue((homePage.isUserDashboardVisibleLogin()));
     }
 
     @Then("devo visualizar mensagem de acesso negado")
